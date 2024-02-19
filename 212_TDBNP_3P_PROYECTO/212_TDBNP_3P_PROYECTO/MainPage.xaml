@@ -1,0 +1,979 @@
+﻿<Page
+    x:Class="_212_TDBNP_3P_PROYECTO.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_212_TDBNP_3P_PROYECTO"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Storyboard x:Name="sbParado">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.3000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado2" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.3000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado3" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.9000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado4" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.9000000" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="sbAtacar">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000" Value="Collapsed"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:08.5000000" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.2000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.2000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.3000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy2" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.3000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy3" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy4" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy5" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.7000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy6" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.7000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.8000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy7" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.8000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.9000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy8" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.9000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy9" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.1000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy10" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.1000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.2000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy11" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.2000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.3000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy12" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.3000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.4000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy13" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.4000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy14" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.6000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy15" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.7000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy16" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.7000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.8000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy17" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.8000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.9000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy18" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.9000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy19" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.1000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy20" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.1000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.2000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy21" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.2000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.3000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy22" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.3000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.4000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy23" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.4000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.5000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy24" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.5000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.6000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy25" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.7000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy26" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.7000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.8000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy27" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.8000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.9000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy28" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.9000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy29" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.1000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy30" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.1000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.2000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy31" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.2000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.3000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy32" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.3000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.4000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy33" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.4000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.5000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy34" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.5000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.6000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy35" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.7000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy36" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.7000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.8000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy37" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.8000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.9000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy38" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.9000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy39" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.1000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy40" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.1000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.2000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy41" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.2000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.3000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy42" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.3000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.4000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy43" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.4000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.5000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy44" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.5000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.6000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy45" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.7000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy46" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.7000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.8000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy47" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.8000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.9000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy48" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.9000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy49" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:05" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.1000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy50" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.1000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.2000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy51" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.2000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.3000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy52" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.3000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.4000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy53" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.4000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.5000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy54" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.5000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.6000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Atacar1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.7000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Atacar2" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.7000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.8000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Atacar3" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.8000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:06.1000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Atacar4" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:06.1000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:06.4000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Atacar5" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:06.4000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:06.7000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Atacar6" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:06.7000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:07" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Atacar7" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:07" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:07.3000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Atacar8" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:07.3000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:07.6000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Atacar9" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:07.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:07.9000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Regresar" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:07.9000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:08.4000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Regresar" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:07.9000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:08.4000000" Value="-585"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Regresar" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:07.9000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:08.4000000" Value="5"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="sbAtaqueFinal">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                    <DiscreteObjectKeyFrame.Value>
+                        <Visibility>Visible</Visibility>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.1000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.2000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.2000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.3000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy2" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.3000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy3" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy4" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy5" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.7000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy6" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.7000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.8000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy7" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.8000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.9000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy8" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.9000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy9" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.1000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy10" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.1000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.2000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy11" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.2000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.3000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy12" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.3000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.4000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy13" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.4000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy14" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.5000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.6000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy15" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.7000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy16" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.7000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.8000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy17" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.8000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.9000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy18" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:01.9000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy19" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.1000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy20" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.1000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.2000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy21" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.2000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.3000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy22" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.3000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.4000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy23" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.4000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.5000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy24" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.5000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.6000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy25" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.7000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy26" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.7000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.8000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy27" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.8000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.9000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy28" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:02.9000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy29" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.1000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy30" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.1000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.2000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy31" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.2000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.3000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy32" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.3000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.4000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy33" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.4000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.5000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy34" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.5000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.6000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy35" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.7000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy36" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.7000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.8000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy37" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.8000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.9000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Parado1_Copy38" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:03.9000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AtaqueFinal1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.2000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AtaqueFinal2" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.2000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.4000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AtaqueFinal3" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.4000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.6000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AtaqueFinal4" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.8000000" Value="Collapsed"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.4000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.6000000" Value="Collapsed"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:06.2000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:06.4000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AtaqueFinal5" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:04.8000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05" Value="Collapsed"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.8000000" Value="Collapsed"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:06.4000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:06.6000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AtaqueFinal6" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:05" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.2000000" Value="Collapsed"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.8000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:06" Value="Collapsed"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:06.6000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:06.8000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AtaqueFinal7" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.2000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:05.4000000" Value="Collapsed"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:06" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:06.2000000" Value="Collapsed"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:06.8000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:07" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AtaqueFianl8" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:07" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:07.1000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AtaqueFinal9" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:07.1000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:07.2000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AtaqueFinal10" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:07.2000000" Value="Visible"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:07.3000000" Value="Collapsed"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AtaqueFinal11" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:07.3000000" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="txtWin" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:07.3000000" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:04.6000000" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:07.3000000" Value="0.195"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="canvas" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:04.6000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:07.3000000" Value="82.5"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="23*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="2" Stroke="Black" Fill="#FF15151D" Margin="110,0,109,0" d:IsLocked="True"/>
+        <Rectangle Stroke="Black" Fill="#FFFF7A3C" d:IsLocked="True"/>
+        <Rectangle Stroke="Black" Grid.Row="1" d:IsLocked="True">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Assets/HD-wallpaper-japanese-trees-dragon-pixel-art-8-bit-pixel-artist-artwork-digital-art.jpg" Stretch="None"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="205" Margin="755,240,0,0" Grid.RowSpan="2" Grid.Row="1" VerticalAlignment="Top" Width="160" RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
+                <CompositeTransform/>
+            </Canvas.RenderTransform>
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/FFRK_Samurai_sprites.png"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1" HorizontalAlignment="Left" Height="75" Margin="125,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="50" Grid.RowSpan="2">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Parado1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado2" HorizontalAlignment="Left" Height="75" Margin="125,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="50" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Parado2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado3" HorizontalAlignment="Left" Height="75" Margin="125,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="50" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Parado3-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado4" HorizontalAlignment="Left" Height="75" Margin="125,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="50" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Parado4-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy" HorizontalAlignment="Left" Height="75" Margin="135,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy1" HorizontalAlignment="Left" Height="75" Margin="150,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy2" HorizontalAlignment="Left" Height="75" Margin="160,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando3-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy3" HorizontalAlignment="Left" Height="75" Margin="173,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando4-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy4" HorizontalAlignment="Left" Height="75" Margin="180,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando5-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy5" HorizontalAlignment="Left" Height="75" Margin="188,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando6-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy6" HorizontalAlignment="Left" Height="75" Margin="195,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy7" HorizontalAlignment="Left" Height="75" Margin="210,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy8" HorizontalAlignment="Left" Height="75" Margin="220,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando3-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy9" HorizontalAlignment="Left" Height="75" Margin="233,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando4-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy10" HorizontalAlignment="Left" Height="75" Margin="240,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando5-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy11" HorizontalAlignment="Left" Height="75" Margin="248,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando6-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy12" HorizontalAlignment="Left" Height="75" Margin="247,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy13" HorizontalAlignment="Left" Height="75" Margin="262,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy14" HorizontalAlignment="Left" Height="75" Margin="272,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando3-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy15" HorizontalAlignment="Left" Height="75" Margin="285,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando4-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy16" HorizontalAlignment="Left" Height="75" Margin="292,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando5-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy17" HorizontalAlignment="Left" Height="75" Margin="300,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando6-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy18" HorizontalAlignment="Left" Height="75" Margin="307,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy19" HorizontalAlignment="Left" Height="75" Margin="322,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy20" HorizontalAlignment="Left" Height="75" Margin="332,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando3-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy21" HorizontalAlignment="Left" Height="75" Margin="345,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando4-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy22" HorizontalAlignment="Left" Height="75" Margin="352,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando5-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy23" HorizontalAlignment="Left" Height="75" Margin="360,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando6-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy24" HorizontalAlignment="Left" Height="75" Margin="367,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy25" HorizontalAlignment="Left" Height="75" Margin="382,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy26" HorizontalAlignment="Left" Height="75" Margin="392,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando3-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy27" HorizontalAlignment="Left" Height="75" Margin="405,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando4-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy28" HorizontalAlignment="Left" Height="75" Margin="412,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando5-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy29" HorizontalAlignment="Left" Height="75" Margin="420,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando6-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy30" HorizontalAlignment="Left" Height="75" Margin="422,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy31" HorizontalAlignment="Left" Height="75" Margin="437,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy32" HorizontalAlignment="Left" Height="75" Margin="447,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando3-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy33" HorizontalAlignment="Left" Height="75" Margin="460,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando4-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy34" HorizontalAlignment="Left" Height="75" Margin="467,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando5-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy35" HorizontalAlignment="Center" Height="75" Margin="0,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando6-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy36" HorizontalAlignment="Left" Height="75" Margin="482,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy37" HorizontalAlignment="Left" Height="75" Margin="497,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy38" HorizontalAlignment="Left" Height="75" Margin="507,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando3-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy39" HorizontalAlignment="Left" Height="75" Margin="520,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando4-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy40" HorizontalAlignment="Left" Height="75" Margin="527,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando5-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy41" HorizontalAlignment="Left" Height="75" Margin="535,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando6-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy42" HorizontalAlignment="Left" Height="75" Margin="534,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy43" HorizontalAlignment="Left" Height="75" Margin="549,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy44" HorizontalAlignment="Left" Height="75" Margin="559,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando3-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy45" HorizontalAlignment="Left" Height="75" Margin="572,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando4-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy46" HorizontalAlignment="Left" Height="75" Margin="579,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando5-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy47" HorizontalAlignment="Left" Height="75" Margin="587,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando6-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy48" HorizontalAlignment="Left" Height="75" Margin="594,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy49" HorizontalAlignment="Left" Height="75" Margin="609,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy50" HorizontalAlignment="Left" Height="75" Margin="619,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando3-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy51" HorizontalAlignment="Left" Height="75" Margin="632,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando4-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy52" HorizontalAlignment="Left" Height="75" Margin="639,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando5-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy53" HorizontalAlignment="Left" Height="75" Margin="647,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Caminando6-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Parado1_Copy54" HorizontalAlignment="Left" Height="75" Margin="662,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="93" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Frenando1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Atacar1" HorizontalAlignment="Left" Height="75" Margin="677,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Atacar1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Atacar2" HorizontalAlignment="Left" Height="75" Margin="677,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="82" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Atacar2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Atacar3" HorizontalAlignment="Left" Height="75" Margin="677,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Atacar3-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Atacar4" HorizontalAlignment="Left" Height="75" Margin="677,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Atacar4-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Atacar5" HorizontalAlignment="Left" Height="75" Margin="677,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Atacar5-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Atacar6" HorizontalAlignment="Left" Height="75" Margin="677,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Atacar6-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Atacar7" HorizontalAlignment="Left" Height="75" Margin="677,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Atacar7-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Atacar8" HorizontalAlignment="Left" Height="75" Margin="677,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Atacar8-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Atacar9" HorizontalAlignment="Left" Height="75" Margin="677,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Atacar1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="Regresar" HorizontalAlignment="Left" Height="75" Margin="677,370,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118" Grid.RowSpan="2" Visibility="Collapsed" RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
+                <CompositeTransform/>
+            </Canvas.RenderTransform>
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Frenando1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Button x:Name="btnAtacar" Content="Atacar" Margin="24,0,0,0" Click="btnAtacar_Click" Background="#66FFFFFF" FontSize="32"/>
+        <Button x:Name="btnAtaqueFinal" Content="Ataque Final" Margin="810,0,0,0" Click="btnAtaqueFinal_Click" Background="#66FFFFFF" FontSize="32" HorizontalAlignment="Center"/>
+        <Canvas x:Name="AtaqueFinal1" HorizontalAlignment="Left" Height="83" Margin="500,362,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Salto1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="AtaqueFinal2" HorizontalAlignment="Left" Height="83" Margin="545,327,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Salto2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="AtaqueFinal3" HorizontalAlignment="Left" Height="83" Margin="590,292,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Salto2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="AtaqueFinal4" HorizontalAlignment="Left" Height="83" Margin="655,260,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-AtaqueFinal1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="AtaqueFinal5" HorizontalAlignment="Left" Height="83" Margin="655,260,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-AtaqueFinal2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="AtaqueFinal6" HorizontalAlignment="Left" Height="83" Margin="655,260,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-AtaqueFinal3-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="AtaqueFinal7" HorizontalAlignment="Left" Height="83" Margin="655,260,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-AtaqueFinal4-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="AtaqueFianl8" HorizontalAlignment="Left" Height="83" Margin="655,292,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Salto2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="AtaqueFinal9" HorizontalAlignment="Left" Height="83" Margin="655,317,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Salto2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="AtaqueFinal10" HorizontalAlignment="Left" Height="83" Margin="655,343,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Salto2-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas x:Name="AtaqueFinal11" HorizontalAlignment="Left" Height="83" Margin="655,362,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" Visibility="Collapsed">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Assets/Ninja scripts/black-ninja-Salto1-removebg-preview.png" Stretch="Uniform"/>
+            </Canvas.Background>
+        </Canvas>
+        <TextBlock x:Name="txtWin" HorizontalAlignment="Left" Margin="350,40,0,0" Grid.Row="1" Text="You Win!" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="SimSun-ExtB" FontSize="90" Visibility="Collapsed"/>
+        <Button x:Name="btnReiniciar" Content="Reiniciar" Height="56" Width="152" HorizontalAlignment="Center" Background="#5FFFFFFF" FontSize="32" Click="btnReiniciar_Click"/>
+
+    </Grid>
+</Page>
